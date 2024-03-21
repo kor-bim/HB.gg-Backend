@@ -1,6 +1,5 @@
 package com.bim.hbgg.controller;
 
-import com.bim.hbgg.domain.Summoner;
 import com.bim.hbgg.dto.SummonerLeagueDto;
 import com.bim.hbgg.service.SummonerService;
 import org.springframework.beans.factory.annotation.Autowired;
