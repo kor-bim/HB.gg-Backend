@@ -1,6 +1,7 @@
 package com.bim.hbgg.controller;
 
 import com.bim.hbgg.domain.Summoner;
+import com.bim.hbgg.dto.SummonerLeagueDto;
 import com.bim.hbgg.service.SummonerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -17,9 +18,9 @@ public class SummonerController {
         this.summonerService = summonerService;
     }
 
-    @GetMapping("/{gameName}/{tagLine}")
-    public ResponseEntity<Summoner> getSummoner(@PathVariable String gameName, @PathVariable String tagLine) {
-        Summoner summoner = summonerService.getOrCreateSummoner(gameName, tagLine);
-        return ResponseEntity.ok(summoner);
+    @GetMapping("/{summonerName}/{tagLine}")
+    public ResponseEntity<SummonerLeagueDto> getSummoner(@PathVariable String summonerName, @PathVariable String tagLine) {
+        SummonerLeagueDto summonerLeagueDto = summonerService.getOrCreateSummoner(summonerName, tagLine);
+        return ResponseEntity.ok(summonerLeagueDto);
     }
 }
