@@ -16,4 +16,11 @@ spring:
       hibernate:
         format_sql: true
         show_sql: true
+        highlight_sql: true
         default_schema: game
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type.descriptor.sql: trace
+    org.hibernate.orm.jdbc.bind: trace
+
