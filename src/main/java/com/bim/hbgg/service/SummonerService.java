@@ -9,8 +9,6 @@ import com.bim.hbgg.dto.SummonerLeagueDto;
 import com.bim.hbgg.repository.LeagueRepository;
 import com.bim.hbgg.repository.SummonerRepository;
 import jakarta.transaction.Transactional;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +17,6 @@ import java.util.Optional;
 
 @Service
 public class SummonerService {
-    private static final Logger logger = LoggerFactory.getLogger(RiotApiService.class);
     private final SummonerRepository summonerRepository;
     private final LeagueRepository leagueRepository;
     private final RiotApiService riotApiService;

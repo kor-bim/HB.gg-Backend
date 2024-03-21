@@ -66,7 +66,8 @@ public class RiotApiService {
                 url,
                 HttpMethod.GET,
                 entity,
-                new ParameterizedTypeReference<List<LeagueEntryDTO>>() {});
+                new ParameterizedTypeReference<>() {
+                });
         logger.debug("Response from Riot League API: {}", response);
 
         return response.getBody();
