@@ -5,9 +5,6 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
-import java.util.UUID;
-
 @Getter
 @Setter
 @Entity
@@ -15,39 +12,30 @@ import java.util.UUID;
 public class Summoner {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
-
-    @Column(name = "summoner_id")
+    @Column(name = "id")
     private String summonerId;
 
-    @Column(name = "acct_id")
-    private String acctId;
+    @Column(name = "account_id")
+    private String accountId;
 
     @Column(name = "puuid")
     private String puuid;
 
-    @Column(name = "tagline")
-    private String tagline;
+    @Column(name = "profile_icon_id")
+    private Integer profileIconId;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "summoner_name")
+    private String summonerName;
 
-    @Column(name = "game_name")
-    private String gameName;
+    @Column(name = "tag_line")
+    private String tagLine;
 
     @Column(name = "internal_name")
     private String internalName;
 
-    @Column(name = "profile_image_url")
-    private String profileImageUrl;
+    @Column(name = "summoner_level")
+    private Long summonerLevel;
 
-    @Column(name = "level")
-    private Integer level;
-
-    @Column(name = "updated_at", insertable = false, updatable = false)
-    private LocalDateTime updatedAt;
-
-    @Column(name = "created_at", insertable = false, updatable = false)
-    private LocalDateTime createdAt;
+    @Column(name = "revision_date")
+    private Long revisionDate;
 }
